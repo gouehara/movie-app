@@ -1,0 +1,22 @@
+.movie {
+  background-color: #f5f5f5;
+}
+
+.card-title {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.card {
+  margin-left: 12.5%;
+}
+
+.card-img {
+  height: 24rem;
+}
+
+#movie {
+  margin-left: 12.5%;
+  margin-top: 3rem;
+  margin-top: 2rem;
+  font-family: "M PLUS 1p", sans-serif;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/search.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="search" class="container">
+    <h1 class="text-center">映画検索</h1>
+    <form action="/results" method="GET" class="d-flex justify-content-center">
+        <input type="text" name="search" class="form-control w-25" placeholder="映画タイトル (star wars...)">
+        <button class="text-center btn btn-success ms-3">検索</button>
+    </form>
+    <figure class="figure mt-5 d-flex flex-column align-items-center">
+        <a href="http://themoviedb.org/">
+        <img src="/assets/blue.svg" class="figure-img img-fluid rounded w-50" alt="TMDB">
+        </a>
+        <figcaption class="figure-caption">このサイトはTMDB APIを使用、TMDB APIは一切の責任を負いかねます。</figcaption>
+      </figure>
+    </div> 
+</body>
+</html>
