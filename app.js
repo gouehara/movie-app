@@ -1,13 +1,13 @@
-require('dotenv').config()
+require('dotenv').config({path: "./config.env"})
 const express = require("express");
 const app = express();
 const path = require("path")
 const axios = require('axios');
 const port = process.env.PORT || 3000
+const key = process.env.API_KEY
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.get("/results", async (req, res) => {
     try {
         const query = req.query.search;
-        const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=ja&query=${query}`);
+        const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${key}&language=ja&query=${query}`);
         const data = response.data.results
         res.render("movies", {data, searchQuery:query})
     } catch (error) {
